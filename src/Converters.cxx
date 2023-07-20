@@ -2614,6 +2614,8 @@ static void* PyFunction_AsCPointer(PyObject* pyobject,
                 exit(-1);
                 return nullptr;
             }
+            std::cout << code.str() << std::endl;
+            exit(-1);
 
         // TODO: is there no easier way?
             static Cppyy::TCppScope_t scope = Cppyy::GetScope("__cppyy_internal");
